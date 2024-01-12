@@ -41,6 +41,15 @@ ul {
     border-radius: 10px;
 }
 
+.button {
+	background-color: rgba(43, 43, 43, 0.226);
+    width: 120px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
 @media screen and (max-width:600px) {
     .head {
         font-size: 5vw;
