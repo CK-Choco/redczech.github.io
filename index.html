@@ -32,12 +32,18 @@
             <h2>選擇時區</h2>
             <select id="timezoneSelect">
                 <option value="America/Los_Angeles">太平洋時間 (PST)</option>
-                <option value="UTC">UTC</option>
+                <option value="UTC">協調世界時間 (UTC)</option>
                 <option value="America/New_York">紐約 (EST)</option>
                 <option value="Europe/London">倫敦 (GMT)</option>
                 <option value="Europe/Paris">巴黎 (CET)</option>
                 <option value="Asia/Tokyo">東京 (JST)</option>
                 <option value="Australia/Sydney">悉尼 (AEST)</option>
+                <option value="Asia/Shanghai">上海 (CST)</option>
+                <option value="Asia/Kolkata">印度 (IST)</option>
+                <option value="Asia/Dubai">杜拜 (GST)</option>
+                <option value="America/Sao_Paulo">聖保羅 (BRT)</option>
+                <option value="Africa/Johannesburg">約翰內斯堡 (SAST)</option>
+                <option value="Pacific/Auckland">奧克蘭 (NZST)</option>
                 <!-- 你可以添加更多的時區選項 -->
             </select>
             <div id="convertedTime" class="time-display"></div>
@@ -55,14 +61,4 @@
             const currentTime = new Date();
             const options = { timeZone: timezone, timeStyle: "medium", dateStyle: "medium" };
             const convertedTime = new Intl.DateTimeFormat("zh-TW", options).format(currentTime);
-            document.getElementById("convertedTime").textContent = convertedTime;
-        }
-
-        document.getElementById("timezoneSelect").addEventListener("change", updateConvertedTime);
-
-        setInterval(updateTaiwanTime, 1000);
-        updateTaiwanTime();
-        updateConvertedTime(); // 初始化右邊時間為太平洋時間
-    </script>
-</body>
-</html>
+            document.getElementById("convertedTime").
