@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>時間轉換</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .time-box {
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 45%;
+        }
+        .time-display {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="time-box">
+            <h2>台灣時間</h2>
+            <div id="taiwanTime" class="time-display"></div>
+        </div>
+        <div class="time-box">
+            <h2>選擇時區</h2>
+            <select id="timezoneSelect">
+                <option value="UTC">UTC</option>
+                <option value="America/New_York">紐約</option>
+                <option value="Europe/London">倫敦</option>
+                <option value="Asia/Tokyo">東京</option>
+                <!-- 你可以添加更多的時區選項 -->
+            </select>
+            <div id="convertedTime" class="time-display"></div>
+        </div>
+    </div>
+
+    <script>
+        function updateTaiwanTime() {
+            const taiwanTime = new Date().toLocaleString("zh-TW", { timeZone: "Asia/Taipei" });
+            document.getElementById("taiwanTime").textContent = taiwanTime;
+        }
+
+        function updateConvertedTime() {
+            const timezone = document.getElementById("timezoneSelect").value;
+            const currentTime = new Date();
+            const options = { timeZone: timezone, timeStyle: "medium", dateStyle: "medium" };
+            const convertedTime = new Intl.DateTimeFormat("zh-TW", options).format(currentTime);
+            document.getElementById("convertedTime").textContent = convertedTime;
+        }
+
+        document.getElementById("timezoneSelect").addEventListener("change", updateConvertedTime);
+
+        setInterval(updateTaiwanTime, 1000);
+        updateTaiwanTime();
+        updateConvertedTime();
+    </script>
+</body>
+</html>
