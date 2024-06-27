@@ -61,4 +61,14 @@
             const currentTime = new Date();
             const options = { timeZone: timezone, timeStyle: "medium", dateStyle: "medium" };
             const convertedTime = new Intl.DateTimeFormat("zh-TW", options).format(currentTime);
-            document.getElementById("convertedTime").
+            document.getElementById("convertedTime").textContent = convertedTime;
+        }
+
+        document.getElementById("timezoneSelect").addEventListener("change", updateConvertedTime);
+
+        setInterval(updateTaiwanTime, 1000);
+        updateTaiwanTime();
+        updateConvertedTime(); // 初始化右邊時間為太平洋時間
+    </script>
+</body>
+</html>
