@@ -67,6 +67,7 @@
         document.getElementById("timezoneSelect").addEventListener("change", updateConvertedTime);
 
         setInterval(updateTaiwanTime, 1000);
+		setInterval(updateConvertedTime, 1000);
         updateTaiwanTime();
         updateConvertedTime(); // 初始化右邊時間為太平洋時間
     </script>
