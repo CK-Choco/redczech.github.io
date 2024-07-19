@@ -1,8 +1,5 @@
-#HC 1.0
-[redczech.github.io](https://redczech.github.io/HC.html)  
-#HC 2.0
-[redczech.github.io](https://redczech.github.io/FTP.html)  
-#敲木魚
-[redczech.github.io](https://redczech.github.io/wood/index.html)  
-#時區切換
-[redczech.github.io](https://redczech.github.io/index.html)  
+[HC 1.0](https://redczech.github.io/HC.html)  
+[HC 2.0](https://redczech.github.io/FTP.html)  
+[敲木魚](https://redczech.github.io/wood/index.html)  
+[時區切換](https://redczech.github.io/index.html)  
+[文字測試](https://redczech.github.io/%E6%96%87%E5%AD%97%E6%B8%AC%E8%A9%A6.html)  
